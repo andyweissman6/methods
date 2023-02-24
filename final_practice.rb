@@ -39,18 +39,13 @@ puts greeting4
 
 # 3: Write a method named greet_person that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
 
-def greet_person(name)
-  "Hi #{name}"
+def greet_person(first_name, middle_name, last_name)
+  "Hi #{first_name} #{middle_name} #{last_name}"
 end
 
-first_name = greet_person ("Paul", "Michael","Williams")
-middle_name = greet_person ("Michael")
-last_name = greet_person ("Williams")
+full_name = greet_person("andy","caleb","weissman")
 
-puts first_name
-puts middle_name
-puts last_name
-
+puts full_name
 
 # What is the return value of your method?
 # How many arguments did you pass your method?
@@ -60,6 +55,13 @@ puts last_name
 # 4: Write a method named square that takes in one integer, and returns the square of that integer.
 # Bonus: Print a sentence that interpolates the return value of your square method.
 
+def square(num)
+  squared = num*num
+  puts "The square of #{num} is #{squared}"
+end
+
+square(5)
+
 # What is the return value of your method?
 # How many arguments did you pass your method?
 # What data type was your argument(s)?
@@ -68,14 +70,26 @@ puts last_name
 # 5: Write a method named check_stock that satisfies the following interaction pattern:
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
 
-#check_stock(4, "Coffee");
+def check_stock(num,food)
+  if num == 0
+    puts "#{food} - OUT of stock!" 
+
+  elsif num > 0 && num < 4
+    puts "#{food} - running LOW"
+
+  elsif num >= 4
+    puts "#{food} is stocked"
+  end
+end
+
+check_stock(4, "Coffee");
 # => "Coffee is stocked"
 
-# check_stock(3, "Tortillas");
-# # => "Tortillas - running LOW"
+check_stock(3, "Tortillas");
+# => "Tortillas - running LOW"
 
-# check_stock(0, "Cheese");
-# # => "Cheese - OUT of stock!"
+check_stock(0, "Cheese");
+# => "Cheese - OUT of stock!"
 
-# check_stock(1, "Salsa");
-# # => "Salsa - running LOW"
+check_stock(1, "Salsa");
+# => "Salsa - running LOW"
