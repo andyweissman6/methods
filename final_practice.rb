@@ -6,18 +6,51 @@
 
 # 1: Write a method named greeting that returns a string with a general greeting. 
 
-# What is the return value of your method?
-# How many arguments did you pass your method?
 
+def greeting
+    "Why hello there"
+end
+
+greeting1 = greeting
+greeting2 = greeting 
+
+puts greeting1
+puts greeting2
+
+# What is the return value of your method? = Why hello there
+
+# How many arguments did you pass your method? = None.
 
 # 2: Write a method named custom_greeting that returns a greeting WITH a specific name.
+def custom_greeting(name)
+    "Hi #{name}!"
+end
 
-# What is the return value of your method?
-# How many arguments did you pass your method?
-# What data type was your argument(s)?
+greeting3 = custom_greeting ("Pablo")
+greeting4 = custom_greeting ("Benny")
+
+puts greeting3
+puts greeting4
+
+# What is the return value of your method? = a string with name interpulated into "Hi Pablo!" and "Hi Benny!"  
+# How many arguments did you pass your method? = 1
+# What data type was your argument(s)? = string
 
 
 # 3: Write a method named greet_person that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
+
+def greet_person(name)
+  "Hi #{name}"
+end
+
+first_name = greet_person ("Paul", "Michael","Williams")
+middle_name = greet_person ("Michael")
+last_name = greet_person ("Williams")
+
+puts first_name
+puts middle_name
+puts last_name
+
 
 # What is the return value of your method?
 # How many arguments did you pass your method?
@@ -35,14 +68,14 @@
 # 5: Write a method named check_stock that satisfies the following interaction pattern:
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
 
-check_stock(4, "Coffee");
+#check_stock(4, "Coffee");
 # => "Coffee is stocked"
 
-check_stock(3, "Tortillas");
-# => "Tortillas - running LOW"
+# check_stock(3, "Tortillas");
+# # => "Tortillas - running LOW"
 
-check_stock(0, "Cheese");
-# => "Cheese - OUT of stock!"
+# check_stock(0, "Cheese");
+# # => "Cheese - OUT of stock!"
 
-check_stock(1, "Salsa");
-# => "Salsa - running LOW"
+# check_stock(1, "Salsa");
+# # => "Salsa - running LOW"
